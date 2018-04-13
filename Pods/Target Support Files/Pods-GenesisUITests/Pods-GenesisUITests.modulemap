@@ -1,0 +1,6 @@
+framework module Pods_GenesisUITests {
+  umbrella header "Pods-GenesisUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

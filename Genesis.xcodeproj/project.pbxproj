@@ -1,0 +1,803 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		012B99E91FF6D13D00AF1B0F /* appSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B99E81FF6D13D00AF1B0F /* appSession.swift */; };
+		012B99EB1FF6D69400AF1B0F /* cardInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B99EA1FF6D69400AF1B0F /* cardInfoCell.swift */; };
+		012B99ED1FF6D92500AF1B0F /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B99EC1FF6D92500AF1B0F /* extensions.swift */; };
+		012B99EF1FF6D96A00AF1B0F /* ImageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B99EE1FF6D96A00AF1B0F /* ImageDetail.swift */; };
+		01429D89201AC65900D5BE8A /* Card.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01429D88201AC65900D5BE8A /* Card.xib */; };
+		01B4C619201AC71700E9FDEF /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B4C618201AC71700E9FDEF /* CardView.swift */; };
+		01D776A51FF6BC3E003BB177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D776A41FF6BC3E003BB177 /* AppDelegate.swift */; };
+		01D776A71FF6BC3E003BB177 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D776A61FF6BC3E003BB177 /* ViewController.swift */; };
+		01D776AA1FF6BC3E003BB177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D776A81FF6BC3E003BB177 /* Main.storyboard */; };
+		01D776AD1FF6BC3E003BB177 /* Genesis.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01D776AB1FF6BC3E003BB177 /* Genesis.xcdatamodeld */; };
+		01D776AF1FF6BC3E003BB177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D776AE1FF6BC3E003BB177 /* Assets.xcassets */; };
+		01D776B21FF6BC3E003BB177 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D776B01FF6BC3E003BB177 /* LaunchScreen.storyboard */; };
+		01D776BD1FF6BC3E003BB177 /* GenesisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D776BC1FF6BC3E003BB177 /* GenesisTests.swift */; };
+		01D776C81FF6BC3E003BB177 /* GenesisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D776C71FF6BC3E003BB177 /* GenesisUITests.swift */; };
+		01D776D61FF6BF20003BB177 /* card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D776D51FF6BF20003BB177 /* card.swift */; };
+		3E7CA85A9B11BF655777BB9E /* Pods_GenesisUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A612E56F9A998411F9DC3CB /* Pods_GenesisUITests.framework */; };
+		86D473D84B85CABFAF540858 /* Pods_GenesisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5E022BB10C581B6B319B36 /* Pods_GenesisTests.framework */; };
+		916C3F849EB22C2C8DB6D747 /* Pods_Genesis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1CF6DF69DA9A9D3B46D442 /* Pods_Genesis.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		01D776B91FF6BC3E003BB177 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01D776991FF6BC3E003BB177 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01D776A01FF6BC3E003BB177;
+			remoteInfo = Genesis;
+		};
+		01D776C41FF6BC3E003BB177 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01D776991FF6BC3E003BB177 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01D776A01FF6BC3E003BB177;
+			remoteInfo = Genesis;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		012B99E81FF6D13D00AF1B0F /* appSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appSession.swift; sourceTree = "<group>"; };
+		012B99EA1FF6D69400AF1B0F /* cardInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardInfoCell.swift; sourceTree = "<group>"; };
+		012B99EC1FF6D92500AF1B0F /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		012B99EE1FF6D96A00AF1B0F /* ImageDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetail.swift; sourceTree = "<group>"; };
+		01429D88201AC65900D5BE8A /* Card.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Card.xib; sourceTree = "<group>"; };
+		01B4C618201AC71700E9FDEF /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		01D776A11FF6BC3E003BB177 /* Genesis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Genesis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01D776A41FF6BC3E003BB177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		01D776A61FF6BC3E003BB177 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		01D776A91FF6BC3E003BB177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		01D776AC1FF6BC3E003BB177 /* Genesis.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Genesis.xcdatamodel; sourceTree = "<group>"; };
+		01D776AE1FF6BC3E003BB177 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01D776B11FF6BC3E003BB177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		01D776B31FF6BC3E003BB177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01D776B81FF6BC3E003BB177 /* GenesisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenesisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01D776BC1FF6BC3E003BB177 /* GenesisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenesisTests.swift; sourceTree = "<group>"; };
+		01D776BE1FF6BC3E003BB177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01D776C31FF6BC3E003BB177 /* GenesisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenesisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01D776C71FF6BC3E003BB177 /* GenesisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenesisUITests.swift; sourceTree = "<group>"; };
+		01D776C91FF6BC3E003BB177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01D776D51FF6BF20003BB177 /* card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = card.swift; sourceTree = "<group>"; };
+		18E0B03C128395647E31B7A7 /* Pods-Genesis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genesis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Genesis/Pods-Genesis.debug.xcconfig"; sourceTree = "<group>"; };
+		3D79D2F0F4B5780AD4E870F7 /* Pods-GenesisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenesisTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GenesisTests/Pods-GenesisTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6A612E56F9A998411F9DC3CB /* Pods_GenesisUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenesisUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		928FFA268729673FFE1A1BE3 /* Pods-GenesisTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenesisTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GenesisTests/Pods-GenesisTests.release.xcconfig"; sourceTree = "<group>"; };
+		CE5E022BB10C581B6B319B36 /* Pods_GenesisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenesisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9484B9566F0B800AA7A84E3 /* Pods-Genesis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genesis.release.xcconfig"; path = "Pods/Target Support Files/Pods-Genesis/Pods-Genesis.release.xcconfig"; sourceTree = "<group>"; };
+		EC2D29F132A9C655355CCC02 /* Pods-GenesisUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenesisUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GenesisUITests/Pods-GenesisUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE6F3D9D62283D22EA4C4059 /* Pods-GenesisUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenesisUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GenesisUITests/Pods-GenesisUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FC1CF6DF69DA9A9D3B46D442 /* Pods_Genesis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Genesis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01D7769E1FF6BC3E003BB177 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				916C3F849EB22C2C8DB6D747 /* Pods_Genesis.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01D776B51FF6BC3E003BB177 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86D473D84B85CABFAF540858 /* Pods_GenesisTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01D776C01FF6BC3E003BB177 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E7CA85A9B11BF655777BB9E /* Pods_GenesisUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01D776981FF6BC3E003BB177 = {
+			isa = PBXGroup;
+			children = (
+				01D776A31FF6BC3E003BB177 /* Genesis */,
+				01D776BB1FF6BC3E003BB177 /* GenesisTests */,
+				01D776C61FF6BC3E003BB177 /* GenesisUITests */,
+				01D776A21FF6BC3E003BB177 /* Products */,
+				BC07ABE8E8AEC2AAC8E9B8BF /* Pods */,
+				A7CAB551F887BEA87948AC04 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		01D776A21FF6BC3E003BB177 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01D776A11FF6BC3E003BB177 /* Genesis.app */,
+				01D776B81FF6BC3E003BB177 /* GenesisTests.xctest */,
+				01D776C31FF6BC3E003BB177 /* GenesisUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01D776A31FF6BC3E003BB177 /* Genesis */ = {
+			isa = PBXGroup;
+			children = (
+				01D776A41FF6BC3E003BB177 /* AppDelegate.swift */,
+				012B99E81FF6D13D00AF1B0F /* appSession.swift */,
+				01D776A61FF6BC3E003BB177 /* ViewController.swift */,
+				01B4C618201AC71700E9FDEF /* CardView.swift */,
+				01D776A81FF6BC3E003BB177 /* Main.storyboard */,
+				012B99EC1FF6D92500AF1B0F /* extensions.swift */,
+				012B99EE1FF6D96A00AF1B0F /* ImageDetail.swift */,
+				01D776AE1FF6BC3E003BB177 /* Assets.xcassets */,
+				01D776B01FF6BC3E003BB177 /* LaunchScreen.storyboard */,
+				01D776B31FF6BC3E003BB177 /* Info.plist */,
+				01D776D51FF6BF20003BB177 /* card.swift */,
+				012B99EA1FF6D69400AF1B0F /* cardInfoCell.swift */,
+				01429D88201AC65900D5BE8A /* Card.xib */,
+				01D776AB1FF6BC3E003BB177 /* Genesis.xcdatamodeld */,
+			);
+			path = Genesis;
+			sourceTree = "<group>";
+		};
+		01D776BB1FF6BC3E003BB177 /* GenesisTests */ = {
+			isa = PBXGroup;
+			children = (
+				01D776BC1FF6BC3E003BB177 /* GenesisTests.swift */,
+				01D776BE1FF6BC3E003BB177 /* Info.plist */,
+			);
+			path = GenesisTests;
+			sourceTree = "<group>";
+		};
+		01D776C61FF6BC3E003BB177 /* GenesisUITests */ = {
+			isa = PBXGroup;
+			children = (
+				01D776C71FF6BC3E003BB177 /* GenesisUITests.swift */,
+				01D776C91FF6BC3E003BB177 /* Info.plist */,
+			);
+			path = GenesisUITests;
+			sourceTree = "<group>";
+		};
+		A7CAB551F887BEA87948AC04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC1CF6DF69DA9A9D3B46D442 /* Pods_Genesis.framework */,
+				CE5E022BB10C581B6B319B36 /* Pods_GenesisTests.framework */,
+				6A612E56F9A998411F9DC3CB /* Pods_GenesisUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC07ABE8E8AEC2AAC8E9B8BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18E0B03C128395647E31B7A7 /* Pods-Genesis.debug.xcconfig */,
+				E9484B9566F0B800AA7A84E3 /* Pods-Genesis.release.xcconfig */,
+				3D79D2F0F4B5780AD4E870F7 /* Pods-GenesisTests.debug.xcconfig */,
+				928FFA268729673FFE1A1BE3 /* Pods-GenesisTests.release.xcconfig */,
+				EC2D29F132A9C655355CCC02 /* Pods-GenesisUITests.debug.xcconfig */,
+				EE6F3D9D62283D22EA4C4059 /* Pods-GenesisUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01D776A01FF6BC3E003BB177 /* Genesis */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01D776CC1FF6BC3E003BB177 /* Build configuration list for PBXNativeTarget "Genesis" */;
+			buildPhases = (
+				84904D454182A27DE200A953 /* [CP] Check Pods Manifest.lock */,
+				01D7769D1FF6BC3E003BB177 /* Sources */,
+				01D7769E1FF6BC3E003BB177 /* Frameworks */,
+				01D7769F1FF6BC3E003BB177 /* Resources */,
+				771F7AFEE1BE6ED5256EBF42 /* [CP] Embed Pods Frameworks */,
+				A5181F2946772DDC6805BF14 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Genesis;
+			productName = Genesis;
+			productReference = 01D776A11FF6BC3E003BB177 /* Genesis.app */;
+			productType = "com.apple.product-type.application";
+		};
+		01D776B71FF6BC3E003BB177 /* GenesisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01D776CF1FF6BC3E003BB177 /* Build configuration list for PBXNativeTarget "GenesisTests" */;
+			buildPhases = (
+				EC27E10F6624B9DA08D91BC6 /* [CP] Check Pods Manifest.lock */,
+				01D776B41FF6BC3E003BB177 /* Sources */,
+				01D776B51FF6BC3E003BB177 /* Frameworks */,
+				01D776B61FF6BC3E003BB177 /* Resources */,
+				CF6F7A08D3B862F7A5750DEF /* [CP] Embed Pods Frameworks */,
+				256D2FB1F0003FA7E69D1A03 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01D776BA1FF6BC3E003BB177 /* PBXTargetDependency */,
+			);
+			name = GenesisTests;
+			productName = GenesisTests;
+			productReference = 01D776B81FF6BC3E003BB177 /* GenesisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		01D776C21FF6BC3E003BB177 /* GenesisUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01D776D21FF6BC3E003BB177 /* Build configuration list for PBXNativeTarget "GenesisUITests" */;
+			buildPhases = (
+				9D0996FF8E56EFC5C6B9D240 /* [CP] Check Pods Manifest.lock */,
+				01D776BF1FF6BC3E003BB177 /* Sources */,
+				01D776C01FF6BC3E003BB177 /* Frameworks */,
+				01D776C11FF6BC3E003BB177 /* Resources */,
+				71A3BC50FA70528AC56A1C7C /* [CP] Embed Pods Frameworks */,
+				4AC3107F1F3C73E40918AF1A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01D776C51FF6BC3E003BB177 /* PBXTargetDependency */,
+			);
+			name = GenesisUITests;
+			productName = GenesisUITests;
+			productReference = 01D776C31FF6BC3E003BB177 /* GenesisUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01D776991FF6BC3E003BB177 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Treefrog Inc";
+				TargetAttributes = {
+					01D776A01FF6BC3E003BB177 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					01D776B71FF6BC3E003BB177 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 01D776A01FF6BC3E003BB177;
+					};
+					01D776C21FF6BC3E003BB177 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 01D776A01FF6BC3E003BB177;
+					};
+				};
+			};
+			buildConfigurationList = 01D7769C1FF6BC3E003BB177 /* Build configuration list for PBXProject "Genesis" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 01D776981FF6BC3E003BB177;
+			productRefGroup = 01D776A21FF6BC3E003BB177 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01D776A01FF6BC3E003BB177 /* Genesis */,
+				01D776B71FF6BC3E003BB177 /* GenesisTests */,
+				01D776C21FF6BC3E003BB177 /* GenesisUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01D7769F1FF6BC3E003BB177 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01D776B21FF6BC3E003BB177 /* LaunchScreen.storyboard in Resources */,
+				01D776AF1FF6BC3E003BB177 /* Assets.xcassets in Resources */,
+				01D776AA1FF6BC3E003BB177 /* Main.storyboard in Resources */,
+				01429D89201AC65900D5BE8A /* Card.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01D776B61FF6BC3E003BB177 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01D776C11FF6BC3E003BB177 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		256D2FB1F0003FA7E69D1A03 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GenesisTests/Pods-GenesisTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4AC3107F1F3C73E40918AF1A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GenesisUITests/Pods-GenesisUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71A3BC50FA70528AC56A1C7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GenesisUITests/Pods-GenesisUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		771F7AFEE1BE6ED5256EBF42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Genesis/Pods-Genesis-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84904D454182A27DE200A953 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9D0996FF8E56EFC5C6B9D240 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A5181F2946772DDC6805BF14 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Genesis/Pods-Genesis-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF6F7A08D3B862F7A5750DEF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GenesisTests/Pods-GenesisTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC27E10F6624B9DA08D91BC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01D7769D1FF6BC3E003BB177 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01B4C619201AC71700E9FDEF /* CardView.swift in Sources */,
+				012B99E91FF6D13D00AF1B0F /* appSession.swift in Sources */,
+				01D776AD1FF6BC3E003BB177 /* Genesis.xcdatamodeld in Sources */,
+				012B99EF1FF6D96A00AF1B0F /* ImageDetail.swift in Sources */,
+				01D776A71FF6BC3E003BB177 /* ViewController.swift in Sources */,
+				012B99ED1FF6D92500AF1B0F /* extensions.swift in Sources */,
+				01D776A51FF6BC3E003BB177 /* AppDelegate.swift in Sources */,
+				01D776D61FF6BF20003BB177 /* card.swift in Sources */,
+				012B99EB1FF6D69400AF1B0F /* cardInfoCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01D776B41FF6BC3E003BB177 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01D776BD1FF6BC3E003BB177 /* GenesisTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01D776BF1FF6BC3E003BB177 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01D776C81FF6BC3E003BB177 /* GenesisUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01D776BA1FF6BC3E003BB177 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01D776A01FF6BC3E003BB177 /* Genesis */;
+			targetProxy = 01D776B91FF6BC3E003BB177 /* PBXContainerItemProxy */;
+		};
+		01D776C51FF6BC3E003BB177 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01D776A01FF6BC3E003BB177 /* Genesis */;
+			targetProxy = 01D776C41FF6BC3E003BB177 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		01D776A81FF6BC3E003BB177 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01D776A91FF6BC3E003BB177 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		01D776B01FF6BC3E003BB177 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01D776B11FF6BC3E003BB177 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		01D776CA1FF6BC3E003BB177 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		01D776CB1FF6BC3E003BB177 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01D776CD1FF6BC3E003BB177 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18E0B03C128395647E31B7A7 /* Pods-Genesis.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2NAZNC754;
+				INFOPLIST_FILE = Genesis/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Treefrog.Genesis;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		01D776CE1FF6BC3E003BB177 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9484B9566F0B800AA7A84E3 /* Pods-Genesis.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2NAZNC754;
+				INFOPLIST_FILE = Genesis/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Treefrog.Genesis;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		01D776D01FF6BC3E003BB177 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D79D2F0F4B5780AD4E870F7 /* Pods-GenesisTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2NAZNC754;
+				INFOPLIST_FILE = GenesisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Treefrog.GenesisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Genesis.app/Genesis";
+			};
+			name = Debug;
+		};
+		01D776D11FF6BC3E003BB177 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 928FFA268729673FFE1A1BE3 /* Pods-GenesisTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2NAZNC754;
+				INFOPLIST_FILE = GenesisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Treefrog.GenesisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Genesis.app/Genesis";
+			};
+			name = Release;
+		};
+		01D776D31FF6BC3E003BB177 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC2D29F132A9C655355CCC02 /* Pods-GenesisUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2NAZNC754;
+				INFOPLIST_FILE = GenesisUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Treefrog.GenesisUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Genesis;
+			};
+			name = Debug;
+		};
+		01D776D41FF6BC3E003BB177 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE6F3D9D62283D22EA4C4059 /* Pods-GenesisUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2NAZNC754;
+				INFOPLIST_FILE = GenesisUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Treefrog.GenesisUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Genesis;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01D7769C1FF6BC3E003BB177 /* Build configuration list for PBXProject "Genesis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01D776CA1FF6BC3E003BB177 /* Debug */,
+				01D776CB1FF6BC3E003BB177 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01D776CC1FF6BC3E003BB177 /* Build configuration list for PBXNativeTarget "Genesis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01D776CD1FF6BC3E003BB177 /* Debug */,
+				01D776CE1FF6BC3E003BB177 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01D776CF1FF6BC3E003BB177 /* Build configuration list for PBXNativeTarget "GenesisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01D776D01FF6BC3E003BB177 /* Debug */,
+				01D776D11FF6BC3E003BB177 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01D776D21FF6BC3E003BB177 /* Build configuration list for PBXNativeTarget "GenesisUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01D776D31FF6BC3E003BB177 /* Debug */,
+				01D776D41FF6BC3E003BB177 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		01D776AB1FF6BC3E003BB177 /* Genesis.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				01D776AC1FF6BC3E003BB177 /* Genesis.xcdatamodel */,
+			);
+			currentVersion = 01D776AC1FF6BC3E003BB177 /* Genesis.xcdatamodel */;
+			path = Genesis.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 01D776991FF6BC3E003BB177 /* Project object */;
+}
