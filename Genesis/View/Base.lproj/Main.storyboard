@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -183,22 +184,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="VPx-F7-aZu">
+                                <rect key="frame" x="67" y="236.5" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="n2Q-40-gG2"/>
+                                    <constraint firstAttribute="width" constant="240" id="sZA-7W-8Rv"/>
+                                </constraints>
+                            </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="bpb-gR-e7B">
-                                <rect key="frame" x="157" y="303.5" width="60" height="60"/>
+                                <rect key="frame" x="157" y="345" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="p17-h4-HIw"/>
                                     <constraint firstAttribute="height" constant="60" id="quG-jT-RcL"/>
                                 </constraints>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OlF-9B-jQH">
+                                <rect key="frame" x="187.5" y="413" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bpb-gR-e7B" firstAttribute="centerX" secondItem="hTN-N3-b8r" secondAttribute="centerX" id="9sn-M8-VHy"/>
-                            <constraint firstItem="bpb-gR-e7B" firstAttribute="centerY" secondItem="hTN-N3-b8r" secondAttribute="centerY" id="M2m-BL-aMH"/>
+                            <constraint firstItem="OlF-9B-jQH" firstAttribute="centerX" secondItem="bpb-gR-e7B" secondAttribute="centerX" id="Lfh-39-xjC"/>
+                            <constraint firstItem="bpb-gR-e7B" firstAttribute="centerY" secondItem="hTN-N3-b8r" secondAttribute="centerY" multiplier="9:8" id="M2m-BL-aMH"/>
+                            <constraint firstItem="VPx-F7-aZu" firstAttribute="centerY" secondItem="AT0-GO-z6Q" secondAttribute="centerY" multiplier="7:8" id="Oy5-1X-wO2"/>
+                            <constraint firstItem="OlF-9B-jQH" firstAttribute="top" secondItem="bpb-gR-e7B" secondAttribute="bottom" constant="8" id="QCw-HE-wSu"/>
+                            <constraint firstItem="VPx-F7-aZu" firstAttribute="centerX" secondItem="AT0-GO-z6Q" secondAttribute="centerX" id="UY3-Dl-SFX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AT0-GO-z6Q"/>
                     </view>
                     <connections>
+                        <outlet property="lblStatus" destination="OlF-9B-jQH" id="wZU-EN-goB"/>
                         <segue destination="qrR-E1-4fs" kind="show" identifier="loaded" animates="NO" id="oK7-Hr-4hL"/>
                     </connections>
                 </viewController>
@@ -225,4 +245,7 @@
             <point key="canvasLocation" x="-366" y="89"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="350" height="150"/>
+    </resources>
 </document>

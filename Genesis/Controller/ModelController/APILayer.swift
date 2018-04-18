@@ -11,7 +11,7 @@ import Alamofire
 class APILayer {
     static let shared = APILayer()
     
-    func loadAllCards(success:@escaping ()->()){
+    func loadAllCards(update:@escaping (String)-> (), success:@escaping ()->()){
         Alamofire.request("http://genesis-online.herokuapp.com/cards", method: .get).responseJSON{ response in
             
             if let json = response.result.value as? [String:[String:Any]] {
@@ -38,7 +38,8 @@ class APILayer {
                     
                     let card = Card(id: id, rarity: rarity, card_number: card_number, name: name, affiliation: affiliation, type: type, awareness: awareness, rule_text: rule_text, artist: artist, set: set, created_at: created_at, updated_at: updated_at, number: number, supertype: supertype)
                     
-                    card.loadImageUsingCacheWithURLString(pictureString, placeHolder: UIImage(named: "default_card")!, success: {
+                    card.loadImageUsingCacheWithURLString(pictureString, placeHolder: UIImage(named: "default_card")!,  complete: {
+                        update("\(AppSession.shared.cards.count) of \(json.count)")
                         AppSession.shared.cards.append(card)
                         if AppSession.shared.cards.count == json.count {
                             success()

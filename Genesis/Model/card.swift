@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class Card : urlImageObject {
+class Card : ImageFromURLFetcher {
     let id:Int
     let rarity:String
     let card_number:Int

@@ -24,7 +24,7 @@
 		01D776D61FF6BF20003BB177 /* card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D776D51FF6BF20003BB177 /* card.swift */; };
 		3E7CA85A9B11BF655777BB9E /* Pods_GenesisUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A612E56F9A998411F9DC3CB /* Pods_GenesisUITests.framework */; };
 		6018E7552087B9F000C2A6F0 /* APILayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6018E7542087B9F000C2A6F0 /* APILayer.swift */; };
-		60B8F3E92087CE4600BAB97C /* urlImageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B8F3E82087CE4600BAB97C /* urlImageObject.swift */; };
+		60B8F3E92087CE4600BAB97C /* ImageFromURLFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B8F3E82087CE4600BAB97C /* ImageFromURLFetcher.swift */; };
 		60BE589D2087D7F100CD7DF6 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE589C2087D7F100CD7DF6 /* LoadingVC.swift */; };
 		86D473D84B85CABFAF540858 /* Pods_GenesisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5E022BB10C581B6B319B36 /* Pods_GenesisTests.framework */; };
 		916C3F849EB22C2C8DB6D747 /* Pods_Genesis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1CF6DF69DA9A9D3B46D442 /* Pods_Genesis.framework */; };
@@ -72,7 +72,7 @@
 		18E0B03C128395647E31B7A7 /* Pods-Genesis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genesis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Genesis/Pods-Genesis.debug.xcconfig"; sourceTree = "<group>"; };
 		3D79D2F0F4B5780AD4E870F7 /* Pods-GenesisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenesisTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GenesisTests/Pods-GenesisTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6018E7542087B9F000C2A6F0 /* APILayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILayer.swift; sourceTree = "<group>"; };
-		60B8F3E82087CE4600BAB97C /* urlImageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = urlImageObject.swift; sourceTree = "<group>"; };
+		60B8F3E82087CE4600BAB97C /* ImageFromURLFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFromURLFetcher.swift; sourceTree = "<group>"; };
 		60BE589C2087D7F100CD7DF6 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
 		6A612E56F9A998411F9DC3CB /* Pods_GenesisUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenesisUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		928FFA268729673FFE1A1BE3 /* Pods-GenesisTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenesisTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GenesisTests/Pods-GenesisTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,7 +167,6 @@
 			children = (
 				012B99E81FF6D13D00AF1B0F /* appSession.swift */,
 				01D776D51FF6BF20003BB177 /* card.swift */,
-				60B8F3E82087CE4600BAB97C /* urlImageObject.swift */,
 				01D776AB1FF6BC3E003BB177 /* Genesis.xcdatamodeld */,
 			);
 			path = Model;
@@ -219,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				6018E7542087B9F000C2A6F0 /* APILayer.swift */,
+				60B8F3E82087CE4600BAB97C /* ImageFromURLFetcher.swift */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -548,7 +548,7 @@
 				60BE589D2087D7F100CD7DF6 /* LoadingVC.swift in Sources */,
 				01D776A71FF6BC3E003BB177 /* CardListVC.swift in Sources */,
 				012B99ED1FF6D92500AF1B0F /* extensions.swift in Sources */,
-				60B8F3E92087CE4600BAB97C /* urlImageObject.swift in Sources */,
+				60B8F3E92087CE4600BAB97C /* ImageFromURLFetcher.swift in Sources */,
 				01D776A51FF6BC3E003BB177 /* AppDelegate.swift in Sources */,
 				01D776D61FF6BF20003BB177 /* card.swift in Sources */,
 				012B99EB1FF6D69400AF1B0F /* cardInfoCell.swift in Sources */,
