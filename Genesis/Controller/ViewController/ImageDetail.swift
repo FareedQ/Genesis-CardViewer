@@ -16,7 +16,6 @@ class ImageDetail: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        imgCard.downloadedFrom(url: URL(string: AppSession.shared.cards[selectedCard].picture)!)
     }
     
 }

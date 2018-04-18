@@ -14,7 +14,7 @@
 		01429D89201AC65900D5BE8A /* Card.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01429D88201AC65900D5BE8A /* Card.xib */; };
 		01B4C619201AC71700E9FDEF /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B4C618201AC71700E9FDEF /* CardView.swift */; };
 		01D776A51FF6BC3E003BB177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D776A41FF6BC3E003BB177 /* AppDelegate.swift */; };
-		01D776A71FF6BC3E003BB177 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D776A61FF6BC3E003BB177 /* ViewController.swift */; };
+		01D776A71FF6BC3E003BB177 /* CardListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D776A61FF6BC3E003BB177 /* CardListVC.swift */; };
 		01D776AA1FF6BC3E003BB177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D776A81FF6BC3E003BB177 /* Main.storyboard */; };
 		01D776AD1FF6BC3E003BB177 /* Genesis.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01D776AB1FF6BC3E003BB177 /* Genesis.xcdatamodeld */; };
 		01D776AF1FF6BC3E003BB177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D776AE1FF6BC3E003BB177 /* Assets.xcassets */; };
@@ -23,6 +23,9 @@
 		01D776C81FF6BC3E003BB177 /* GenesisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D776C71FF6BC3E003BB177 /* GenesisUITests.swift */; };
 		01D776D61FF6BF20003BB177 /* card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D776D51FF6BF20003BB177 /* card.swift */; };
 		3E7CA85A9B11BF655777BB9E /* Pods_GenesisUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A612E56F9A998411F9DC3CB /* Pods_GenesisUITests.framework */; };
+		6018E7552087B9F000C2A6F0 /* APILayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6018E7542087B9F000C2A6F0 /* APILayer.swift */; };
+		60B8F3E92087CE4600BAB97C /* urlImageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B8F3E82087CE4600BAB97C /* urlImageObject.swift */; };
+		60BE589D2087D7F100CD7DF6 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE589C2087D7F100CD7DF6 /* LoadingVC.swift */; };
 		86D473D84B85CABFAF540858 /* Pods_GenesisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5E022BB10C581B6B319B36 /* Pods_GenesisTests.framework */; };
 		916C3F849EB22C2C8DB6D747 /* Pods_Genesis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1CF6DF69DA9A9D3B46D442 /* Pods_Genesis.framework */; };
 /* End PBXBuildFile section */
@@ -53,7 +56,7 @@
 		01B4C618201AC71700E9FDEF /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		01D776A11FF6BC3E003BB177 /* Genesis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Genesis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01D776A41FF6BC3E003BB177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01D776A61FF6BC3E003BB177 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		01D776A61FF6BC3E003BB177 /* CardListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListVC.swift; sourceTree = "<group>"; };
 		01D776A91FF6BC3E003BB177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01D776AC1FF6BC3E003BB177 /* Genesis.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Genesis.xcdatamodel; sourceTree = "<group>"; };
 		01D776AE1FF6BC3E003BB177 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +71,9 @@
 		01D776D51FF6BF20003BB177 /* card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = card.swift; sourceTree = "<group>"; };
 		18E0B03C128395647E31B7A7 /* Pods-Genesis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genesis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Genesis/Pods-Genesis.debug.xcconfig"; sourceTree = "<group>"; };
 		3D79D2F0F4B5780AD4E870F7 /* Pods-GenesisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenesisTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GenesisTests/Pods-GenesisTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6018E7542087B9F000C2A6F0 /* APILayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILayer.swift; sourceTree = "<group>"; };
+		60B8F3E82087CE4600BAB97C /* urlImageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = urlImageObject.swift; sourceTree = "<group>"; };
+		60BE589C2087D7F100CD7DF6 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
 		6A612E56F9A998411F9DC3CB /* Pods_GenesisUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenesisUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		928FFA268729673FFE1A1BE3 /* Pods-GenesisTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenesisTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GenesisTests/Pods-GenesisTests.release.xcconfig"; sourceTree = "<group>"; };
 		CE5E022BB10C581B6B319B36 /* Pods_GenesisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenesisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,20 +136,10 @@
 		01D776A31FF6BC3E003BB177 /* Genesis */ = {
 			isa = PBXGroup;
 			children = (
-				01D776A41FF6BC3E003BB177 /* AppDelegate.swift */,
-				012B99E81FF6D13D00AF1B0F /* appSession.swift */,
-				01D776A61FF6BC3E003BB177 /* ViewController.swift */,
-				01B4C618201AC71700E9FDEF /* CardView.swift */,
-				01D776A81FF6BC3E003BB177 /* Main.storyboard */,
-				012B99EC1FF6D92500AF1B0F /* extensions.swift */,
-				012B99EE1FF6D96A00AF1B0F /* ImageDetail.swift */,
-				01D776AE1FF6BC3E003BB177 /* Assets.xcassets */,
-				01D776B01FF6BC3E003BB177 /* LaunchScreen.storyboard */,
 				01D776B31FF6BC3E003BB177 /* Info.plist */,
-				01D776D51FF6BF20003BB177 /* card.swift */,
-				012B99EA1FF6D69400AF1B0F /* cardInfoCell.swift */,
-				01429D88201AC65900D5BE8A /* Card.xib */,
-				01D776AB1FF6BC3E003BB177 /* Genesis.xcdatamodeld */,
+				6018E7502087B66100C2A6F0 /* Controller */,
+				6018E74F2087B65C00C2A6F0 /* View */,
+				6018E74E2087B65400C2A6F0 /* Model */,
 			);
 			path = Genesis;
 			sourceTree = "<group>";
@@ -164,6 +160,67 @@
 				01D776C91FF6BC3E003BB177 /* Info.plist */,
 			);
 			path = GenesisUITests;
+			sourceTree = "<group>";
+		};
+		6018E74E2087B65400C2A6F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				012B99E81FF6D13D00AF1B0F /* appSession.swift */,
+				01D776D51FF6BF20003BB177 /* card.swift */,
+				60B8F3E82087CE4600BAB97C /* urlImageObject.swift */,
+				01D776AB1FF6BC3E003BB177 /* Genesis.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6018E74F2087B65C00C2A6F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01D776B01FF6BC3E003BB177 /* LaunchScreen.storyboard */,
+				01D776A81FF6BC3E003BB177 /* Main.storyboard */,
+				01429D88201AC65900D5BE8A /* Card.xib */,
+				01D776AE1FF6BC3E003BB177 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6018E7502087B66100C2A6F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				01D776A41FF6BC3E003BB177 /* AppDelegate.swift */,
+				012B99EC1FF6D92500AF1B0F /* extensions.swift */,
+				6018E7512087B6E800C2A6F0 /* ViewController */,
+				6018E7532087B9D900C2A6F0 /* ModelController */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6018E7512087B6E800C2A6F0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6018E7522087B73000C2A6F0 /* Resusable */,
+				01D776A61FF6BC3E003BB177 /* CardListVC.swift */,
+				012B99EE1FF6D96A00AF1B0F /* ImageDetail.swift */,
+				01B4C618201AC71700E9FDEF /* CardView.swift */,
+				60BE589C2087D7F100CD7DF6 /* LoadingVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6018E7522087B73000C2A6F0 /* Resusable */ = {
+			isa = PBXGroup;
+			children = (
+				012B99EA1FF6D69400AF1B0F /* cardInfoCell.swift */,
+			);
+			path = Resusable;
+			sourceTree = "<group>";
+		};
+		6018E7532087B9D900C2A6F0 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				6018E7542087B9F000C2A6F0 /* APILayer.swift */,
+			);
+			path = ModelController;
 			sourceTree = "<group>";
 		};
 		A7CAB551F887BEA87948AC04 /* Frameworks */ = {
@@ -380,9 +437,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Genesis/Pods-Genesis-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -395,13 +455,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Genesis-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9D0996FF8E56EFC5C6B9D240 /* [CP] Check Pods Manifest.lock */ = {
@@ -410,13 +473,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GenesisUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A5181F2946772DDC6805BF14 /* [CP] Copy Pods Resources */ = {
@@ -455,13 +521,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GenesisTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -471,12 +540,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6018E7552087B9F000C2A6F0 /* APILayer.swift in Sources */,
 				01B4C619201AC71700E9FDEF /* CardView.swift in Sources */,
 				012B99E91FF6D13D00AF1B0F /* appSession.swift in Sources */,
 				01D776AD1FF6BC3E003BB177 /* Genesis.xcdatamodeld in Sources */,
 				012B99EF1FF6D96A00AF1B0F /* ImageDetail.swift in Sources */,
-				01D776A71FF6BC3E003BB177 /* ViewController.swift in Sources */,
+				60BE589D2087D7F100CD7DF6 /* LoadingVC.swift in Sources */,
+				01D776A71FF6BC3E003BB177 /* CardListVC.swift in Sources */,
 				012B99ED1FF6D92500AF1B0F /* extensions.swift in Sources */,
+				60B8F3E92087CE4600BAB97C /* urlImageObject.swift in Sources */,
 				01D776A51FF6BC3E003BB177 /* AppDelegate.swift in Sources */,
 				01D776D61FF6BF20003BB177 /* card.swift in Sources */,
 				012B99EB1FF6D69400AF1B0F /* cardInfoCell.swift in Sources */,
@@ -647,7 +719,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L2NAZNC754;
+				DEVELOPMENT_TEAM = TWCD96G7AS;
 				INFOPLIST_FILE = Genesis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -664,7 +736,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L2NAZNC754;
+				DEVELOPMENT_TEAM = TWCD96G7AS;
 				INFOPLIST_FILE = Genesis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -10,6 +10,7 @@ import UIKit
 
 class CardInfoCell: UITableViewCell {
     
+    @IBOutlet weak var imgCardPicture: UIImageView!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblCardNumber: UILabel!
     @IBOutlet weak var lblAffiliation: UILabel!
@@ -21,6 +22,7 @@ class CardInfoCell: UITableViewCell {
     @IBOutlet weak var lblSet: UILabel!
     
     func configureCell(card:Card){
+        imgCardPicture.image = card.image
         lblName.text = "Name: \(card.name)"
         lblCardNumber.text = "Card Number: \(card.card_number)"
         lblAffiliation.text = "Affiliation: \(card.affiliation)"
@@ -30,6 +32,8 @@ class CardInfoCell: UITableViewCell {
         lblFalvourText.text = "Flavour Text: \(card.flavour_text)"
         lblArtist.text = "Artist: \(card.artist)"
         lblSet.text = "Set: \(card.set)"
+        
+        self.selectionStyle = .none
     }
     
 }
