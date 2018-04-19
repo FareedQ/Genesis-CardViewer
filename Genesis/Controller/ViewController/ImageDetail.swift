@@ -14,8 +14,8 @@ class ImageDetail: UIViewController {
     
     var selectedCard = 0
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewDidLoad() {
+        imgCard.image = AppSession.shared.cards[selectedCard].image
     }
     
 }
