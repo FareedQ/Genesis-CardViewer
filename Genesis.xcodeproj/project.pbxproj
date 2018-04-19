@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		012B99E91FF6D13D00AF1B0F /* appSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B99E81FF6D13D00AF1B0F /* appSession.swift */; };
-		012B99EB1FF6D69400AF1B0F /* cardInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B99EA1FF6D69400AF1B0F /* cardInfoCell.swift */; };
-		012B99ED1FF6D92500AF1B0F /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B99EC1FF6D92500AF1B0F /* extensions.swift */; };
+		012B99E91FF6D13D00AF1B0F /* AppSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B99E81FF6D13D00AF1B0F /* AppSession.swift */; };
+		012B99EB1FF6D69400AF1B0F /* CardInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B99EA1FF6D69400AF1B0F /* CardInfoCell.swift */; };
+		012B99ED1FF6D92500AF1B0F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B99EC1FF6D92500AF1B0F /* Extensions.swift */; };
 		012B99EF1FF6D96A00AF1B0F /* ImageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B99EE1FF6D96A00AF1B0F /* ImageDetail.swift */; };
 		01429D89201AC65900D5BE8A /* Card.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01429D88201AC65900D5BE8A /* Card.xib */; };
 		01B4C619201AC71700E9FDEF /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B4C618201AC71700E9FDEF /* CardView.swift */; };
@@ -21,7 +21,7 @@
 		01D776B21FF6BC3E003BB177 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D776B01FF6BC3E003BB177 /* LaunchScreen.storyboard */; };
 		01D776BD1FF6BC3E003BB177 /* GenesisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D776BC1FF6BC3E003BB177 /* GenesisTests.swift */; };
 		01D776C81FF6BC3E003BB177 /* GenesisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D776C71FF6BC3E003BB177 /* GenesisUITests.swift */; };
-		01D776D61FF6BF20003BB177 /* card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D776D51FF6BF20003BB177 /* card.swift */; };
+		01D776D61FF6BF20003BB177 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D776D51FF6BF20003BB177 /* Card.swift */; };
 		3E7CA85A9B11BF655777BB9E /* Pods_GenesisUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A612E56F9A998411F9DC3CB /* Pods_GenesisUITests.framework */; };
 		6018E7552087B9F000C2A6F0 /* APILayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6018E7542087B9F000C2A6F0 /* APILayer.swift */; };
 		60B8F3E92087CE4600BAB97C /* ImageFromURLFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B8F3E82087CE4600BAB97C /* ImageFromURLFetcher.swift */; };
@@ -48,9 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		012B99E81FF6D13D00AF1B0F /* appSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appSession.swift; sourceTree = "<group>"; };
-		012B99EA1FF6D69400AF1B0F /* cardInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardInfoCell.swift; sourceTree = "<group>"; };
-		012B99EC1FF6D92500AF1B0F /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		012B99E81FF6D13D00AF1B0F /* AppSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSession.swift; sourceTree = "<group>"; };
+		012B99EA1FF6D69400AF1B0F /* CardInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoCell.swift; sourceTree = "<group>"; };
+		012B99EC1FF6D92500AF1B0F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		012B99EE1FF6D96A00AF1B0F /* ImageDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetail.swift; sourceTree = "<group>"; };
 		01429D88201AC65900D5BE8A /* Card.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Card.xib; sourceTree = "<group>"; };
 		01B4C618201AC71700E9FDEF /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		01D776C31FF6BC3E003BB177 /* GenesisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenesisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01D776C71FF6BC3E003BB177 /* GenesisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenesisUITests.swift; sourceTree = "<group>"; };
 		01D776C91FF6BC3E003BB177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01D776D51FF6BF20003BB177 /* card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = card.swift; sourceTree = "<group>"; };
+		01D776D51FF6BF20003BB177 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		18E0B03C128395647E31B7A7 /* Pods-Genesis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genesis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Genesis/Pods-Genesis.debug.xcconfig"; sourceTree = "<group>"; };
 		3D79D2F0F4B5780AD4E870F7 /* Pods-GenesisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenesisTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GenesisTests/Pods-GenesisTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6018E7542087B9F000C2A6F0 /* APILayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILayer.swift; sourceTree = "<group>"; };
@@ -165,8 +165,8 @@
 		6018E74E2087B65400C2A6F0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				012B99E81FF6D13D00AF1B0F /* appSession.swift */,
-				01D776D51FF6BF20003BB177 /* card.swift */,
+				012B99E81FF6D13D00AF1B0F /* AppSession.swift */,
+				01D776D51FF6BF20003BB177 /* Card.swift */,
 				01D776AB1FF6BC3E003BB177 /* Genesis.xcdatamodeld */,
 			);
 			path = Model;
@@ -187,7 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				01D776A41FF6BC3E003BB177 /* AppDelegate.swift */,
-				012B99EC1FF6D92500AF1B0F /* extensions.swift */,
+				012B99EC1FF6D92500AF1B0F /* Extensions.swift */,
 				6018E7512087B6E800C2A6F0 /* ViewController */,
 				6018E7532087B9D900C2A6F0 /* ModelController */,
 			);
@@ -200,7 +200,6 @@
 				6018E7522087B73000C2A6F0 /* Resusable */,
 				01D776A61FF6BC3E003BB177 /* CardListVC.swift */,
 				012B99EE1FF6D96A00AF1B0F /* ImageDetail.swift */,
-				01B4C618201AC71700E9FDEF /* CardView.swift */,
 				60BE589C2087D7F100CD7DF6 /* LoadingVC.swift */,
 			);
 			path = ViewController;
@@ -209,7 +208,8 @@
 		6018E7522087B73000C2A6F0 /* Resusable */ = {
 			isa = PBXGroup;
 			children = (
-				012B99EA1FF6D69400AF1B0F /* cardInfoCell.swift */,
+				012B99EA1FF6D69400AF1B0F /* CardInfoCell.swift */,
+				01B4C618201AC71700E9FDEF /* CardView.swift */,
 			);
 			path = Resusable;
 			sourceTree = "<group>";
@@ -542,16 +542,16 @@
 			files = (
 				6018E7552087B9F000C2A6F0 /* APILayer.swift in Sources */,
 				01B4C619201AC71700E9FDEF /* CardView.swift in Sources */,
-				012B99E91FF6D13D00AF1B0F /* appSession.swift in Sources */,
+				012B99E91FF6D13D00AF1B0F /* AppSession.swift in Sources */,
 				01D776AD1FF6BC3E003BB177 /* Genesis.xcdatamodeld in Sources */,
 				012B99EF1FF6D96A00AF1B0F /* ImageDetail.swift in Sources */,
 				60BE589D2087D7F100CD7DF6 /* LoadingVC.swift in Sources */,
 				01D776A71FF6BC3E003BB177 /* CardListVC.swift in Sources */,
-				012B99ED1FF6D92500AF1B0F /* extensions.swift in Sources */,
+				012B99ED1FF6D92500AF1B0F /* Extensions.swift in Sources */,
 				60B8F3E92087CE4600BAB97C /* ImageFromURLFetcher.swift in Sources */,
 				01D776A51FF6BC3E003BB177 /* AppDelegate.swift in Sources */,
-				01D776D61FF6BF20003BB177 /* card.swift in Sources */,
-				012B99EB1FF6D69400AF1B0F /* cardInfoCell.swift in Sources */,
+				01D776D61FF6BF20003BB177 /* Card.swift in Sources */,
+				012B99EB1FF6D69400AF1B0F /* CardInfoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
