@@ -11,7 +11,7 @@ import Alamofire
 
 class CardListVC: UIViewController {
 
-    var selectedCard = 0
+    fileprivate var selectedCard = 0
     
     @IBOutlet weak var tblInformation: UITableView!
     override func viewDidLoad() {
@@ -76,8 +76,8 @@ extension CardListVC : UITableViewDelegate, UITableViewDataSource {
 //            }
 //        }
         
-//        selectedCard = indexPath.row
-//        self.performSegue(withIdentifier: "image", sender: self)
+        selectedCard = indexPath.row
+        self.performSegue(withIdentifier: "image", sender: self)
     }
     
 }
