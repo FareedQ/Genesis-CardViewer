@@ -27,9 +27,13 @@ class CardInfoCell: UITableViewCell {
         lblCardNumber.text = "Card Number: \(card.card_number)"
         lblAffiliation.text = "Affiliation: \(card.affiliation)"
         lblType.text = "Type: \(card.type)"
-        lblHealth.text = "Health: \(card.health)"
+        if let healthText = card.health {
+            lblHealth.text = "Health: \(healthText)"
+        }
+        if let flavour_text = card.flavour_text {
+            lblFalvourText.text = "Flavour Text: \(flavour_text)"
+        }
         lblAwareness.text = "Awareness: \(card.awareness)"
-        lblFalvourText.text = "Flavour Text: \(card.flavour_text)"
         lblArtist.text = "Artist: \(card.artist)"
         lblSet.text = "Set: \(card.set)"
         

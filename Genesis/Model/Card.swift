@@ -25,11 +25,11 @@ class Card : ImageFromURLFetcher {
     let number:Int
     let supertype:String
     
-    var flavour_text = ""
-    var health = 0
-    var energy = 0
-    var aura = 0
-    var chi = 0
+    var flavour_text:String?
+    var health:String?
+    var energy:Int?
+    var aura:Int?
+    var chi:Int?
     
     init(id: Int, rarity: String, card_number: Int, name: String, affiliation: String, type: String, awareness: String, rule_text: String, artist: String, set: String, created_at: String, updated_at: String, number: Int, supertype: String) {
         self.id = id

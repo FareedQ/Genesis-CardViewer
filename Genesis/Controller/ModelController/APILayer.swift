@@ -46,7 +46,7 @@ class APILayer {
                         }
                     })
                     
-                    if let health = item.value["health"] as? Int {
+                    if let health = item.value["health"] as? String {
                         card.health = health
                     }
                     if let chi = item.value["chi"] as? Int {
