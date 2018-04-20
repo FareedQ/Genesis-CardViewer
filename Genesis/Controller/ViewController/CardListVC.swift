@@ -56,26 +56,6 @@ extension CardListVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-//        let loaded = Bundle.main.loadNibNamed("Card", owner: self, options: nil)
-//        let popUP = loaded?[0] as! CardView
-//        popUP.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
-//        popUP.center = self.view.center
-//        popUP.clipsToBounds = true
-//        popUP.layer.cornerRadius = 10
-//        popUP.layer.borderWidth = 2
-//        popUP.layer.borderColor = UIColor.gray.cgColor
-//        //popUP.imgCard.downloadedFrom(url: URL(string: AppSession.shared.cards[indexPath.row].picture)!)
-//        self.view.addSubview(popUP)
-//        UIView.animate(withDuration: 0.3, animations: {
-//            popUP.bounds = CGRect(x: 0, y: 0, width: 220, height: 320)
-//        }) { _ in
-//            UIView.animate(withDuration: 0.1, animations: {
-//                popUP.bounds = CGRect(x: 0, y: 0, width: 200, height: 300)
-//            }) { _ in
-//                popUP.fadeIn()
-//            }
-//        }
-        
         selectedCard = indexPath.row
         self.performSegue(withIdentifier: "image", sender: self)
     }

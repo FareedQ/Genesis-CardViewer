@@ -32,7 +32,7 @@ class LoadingVC: UIViewController {
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
             let managedContext = appDelegate.persistentContainer.viewContext
             let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Card")
-            AppSession.shared.cards = try managedContext.fetch(fetchRequest)
+            AppSession.shared.cards = try managedContext.fetch(fetchRequest) as! [Card]
             
             
             if !AppSession.shared.cards.isEmpty {

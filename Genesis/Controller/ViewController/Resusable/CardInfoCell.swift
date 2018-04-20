@@ -22,15 +22,14 @@ class CardInfoCell: UITableViewCell {
     @IBOutlet weak var lblArtist: UILabel!
     @IBOutlet weak var lblSet: UILabel!
     
-    func configureCell(card:NSManagedObject){
+    func configureCell(card:Card){
         
         if let imageData = card.value(forKeyPath: "image") as? Data,
             let image = UIImage(data: imageData) {
             imgCardPicture.image = image
         } else {
-            imgCardPicture.image = UIImage(named: "default_card")
+            imgCardPicture.image = defaultCardImage
         }
-        
         
         if let name = card.value(forKeyPath: "name") as? String {
             lblName.text = name
