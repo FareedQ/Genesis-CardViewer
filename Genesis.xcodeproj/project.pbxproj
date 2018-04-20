@@ -10,7 +10,7 @@
 		012B99E91FF6D13D00AF1B0F /* AppSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B99E81FF6D13D00AF1B0F /* AppSession.swift */; };
 		012B99EB1FF6D69400AF1B0F /* CardInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B99EA1FF6D69400AF1B0F /* CardInfoCell.swift */; };
 		012B99ED1FF6D92500AF1B0F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B99EC1FF6D92500AF1B0F /* Extensions.swift */; };
-		012B99EF1FF6D96A00AF1B0F /* ImageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B99EE1FF6D96A00AF1B0F /* ImageDetail.swift */; };
+		012B99EF1FF6D96A00AF1B0F /* ImageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B99EE1FF6D96A00AF1B0F /* ImageDetailVC.swift */; };
 		01429D89201AC65900D5BE8A /* Card.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01429D88201AC65900D5BE8A /* Card.xib */; };
 		01B4C619201AC71700E9FDEF /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B4C618201AC71700E9FDEF /* CardView.swift */; };
 		01D776A51FF6BC3E003BB177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D776A41FF6BC3E003BB177 /* AppDelegate.swift */; };
@@ -24,6 +24,7 @@
 		01D776D61FF6BF20003BB177 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D776D51FF6BF20003BB177 /* Card.swift */; };
 		3E7CA85A9B11BF655777BB9E /* Pods_GenesisUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A612E56F9A998411F9DC3CB /* Pods_GenesisUITests.framework */; };
 		6018E7552087B9F000C2A6F0 /* APILayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6018E7542087B9F000C2A6F0 /* APILayer.swift */; };
+		60712856208A188200E2F468 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60712855208A188200E2F468 /* AboutVC.swift */; };
 		60B8F3E92087CE4600BAB97C /* ImageFromURLFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B8F3E82087CE4600BAB97C /* ImageFromURLFetcher.swift */; };
 		60BE589D2087D7F100CD7DF6 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE589C2087D7F100CD7DF6 /* LoadingVC.swift */; };
 		86D473D84B85CABFAF540858 /* Pods_GenesisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5E022BB10C581B6B319B36 /* Pods_GenesisTests.framework */; };
@@ -51,7 +52,7 @@
 		012B99E81FF6D13D00AF1B0F /* AppSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSession.swift; sourceTree = "<group>"; };
 		012B99EA1FF6D69400AF1B0F /* CardInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoCell.swift; sourceTree = "<group>"; };
 		012B99EC1FF6D92500AF1B0F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		012B99EE1FF6D96A00AF1B0F /* ImageDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetail.swift; sourceTree = "<group>"; };
+		012B99EE1FF6D96A00AF1B0F /* ImageDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailVC.swift; sourceTree = "<group>"; };
 		01429D88201AC65900D5BE8A /* Card.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Card.xib; sourceTree = "<group>"; };
 		01B4C618201AC71700E9FDEF /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		01D776A11FF6BC3E003BB177 /* Genesis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Genesis.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +73,7 @@
 		18E0B03C128395647E31B7A7 /* Pods-Genesis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genesis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Genesis/Pods-Genesis.debug.xcconfig"; sourceTree = "<group>"; };
 		3D79D2F0F4B5780AD4E870F7 /* Pods-GenesisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenesisTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GenesisTests/Pods-GenesisTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6018E7542087B9F000C2A6F0 /* APILayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILayer.swift; sourceTree = "<group>"; };
+		60712855208A188200E2F468 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		60B8F3E82087CE4600BAB97C /* ImageFromURLFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFromURLFetcher.swift; sourceTree = "<group>"; };
 		60BE589C2087D7F100CD7DF6 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
 		6A612E56F9A998411F9DC3CB /* Pods_GenesisUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GenesisUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,8 +201,9 @@
 			children = (
 				6018E7522087B73000C2A6F0 /* Resusable */,
 				01D776A61FF6BC3E003BB177 /* CardListVC.swift */,
-				012B99EE1FF6D96A00AF1B0F /* ImageDetail.swift */,
+				012B99EE1FF6D96A00AF1B0F /* ImageDetailVC.swift */,
 				60BE589C2087D7F100CD7DF6 /* LoadingVC.swift */,
+				60712855208A188200E2F468 /* AboutVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -544,7 +547,8 @@
 				01B4C619201AC71700E9FDEF /* CardView.swift in Sources */,
 				012B99E91FF6D13D00AF1B0F /* AppSession.swift in Sources */,
 				01D776AD1FF6BC3E003BB177 /* Genesis.xcdatamodeld in Sources */,
-				012B99EF1FF6D96A00AF1B0F /* ImageDetail.swift in Sources */,
+				012B99EF1FF6D96A00AF1B0F /* ImageDetailVC.swift in Sources */,
+				60712856208A188200E2F468 /* AboutVC.swift in Sources */,
 				60BE589D2087D7F100CD7DF6 /* LoadingVC.swift in Sources */,
 				01D776A71FF6BC3E003BB177 /* CardListVC.swift in Sources */,
 				012B99ED1FF6D92500AF1B0F /* Extensions.swift in Sources */,
@@ -721,12 +725,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TWCD96G7AS;
 				INFOPLIST_FILE = Genesis/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Treefrog.Genesis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -738,12 +742,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TWCD96G7AS;
 				INFOPLIST_FILE = Genesis/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Treefrog.Genesis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

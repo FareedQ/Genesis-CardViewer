@@ -30,7 +30,7 @@ class CardListVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "image" {
-            if let destinationView = segue.destination as? ImageDetail {
+            if let destinationView = segue.destination as? ImageDetailVC {
                 destinationView.selectedCard = selectedCard
             }
         }

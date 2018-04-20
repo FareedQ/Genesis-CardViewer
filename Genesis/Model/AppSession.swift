@@ -6,8 +6,11 @@
 //  Copyright © 2017 Treefrog Inc. All rights reserved.
 //
 
+import WebKit
+
 class AppSession {
     static let shared = AppSession()
     
     var cards = [Card]()
+    var webView: WKWebView!
 }

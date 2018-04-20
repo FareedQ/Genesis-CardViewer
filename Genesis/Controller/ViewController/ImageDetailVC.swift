@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageDetail: UIViewController {
+class ImageDetailVC: UIViewController {
     
     @IBOutlet weak var imgCard: UIImageView!
     
