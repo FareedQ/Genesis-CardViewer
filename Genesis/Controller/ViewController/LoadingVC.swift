@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import CoreData
 
 class LoadingVC: UIViewController {
     
@@ -23,18 +24,36 @@ class LoadingVC: UIViewController {
         AppSession.shared.webView.load(myRequest)
         
         
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
-        //Loads the cards
-        APILayer.shared.loadAllCards(
-            update: { status in
-                dispatchMain {
-                    self.lblStatus.text = "Loading card \(status)"
-                }
-        }, success: {
-            dispatchMain {
-                self.performSegue(withIdentifier: "loaded", sender: self)
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Card")
+        
+        do {
+            AppSession.shared.cards = try managedContext.fetch(fetchRequest)
+            if AppSession.shared.cards.isEmpty {
+                APILayer.shared.loadAllCards(
+                    update: { status in
+                        dispatchMain {
+                            self.lblStatus.text = "Loading card \(status)"
+                        }
+                }, success: {
+                    self.segueAfterLoad()
+                })
+            } else {
+                self.segueAfterLoad()
             }
-        })
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+            //Loads the cards
+        }
     }
     
+    
+    func segueAfterLoad(){
+        dispatchMain {
+            self.performSegue(withIdentifier: "loaded", sender: self)
+        }
+    }
 }

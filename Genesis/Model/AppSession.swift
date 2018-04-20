@@ -7,10 +7,11 @@
 //
 
 import WebKit
+import CoreData
 
 class AppSession {
     static let shared = AppSession()
     
-    var cards = [Card]()
+    var cards:[NSManagedObject] = []
     var webView: WKWebView!
 }

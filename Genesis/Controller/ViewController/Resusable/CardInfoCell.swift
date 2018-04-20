@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CardInfoCell: UITableViewCell {
     
@@ -21,21 +22,43 @@ class CardInfoCell: UITableViewCell {
     @IBOutlet weak var lblArtist: UILabel!
     @IBOutlet weak var lblSet: UILabel!
     
-    func configureCell(card:Card){
-        imgCardPicture.image = card.image
-        lblName.text = "Name: \(card.name)"
-        lblCardNumber.text = "Card Number: \(card.card_number)"
-        lblAffiliation.text = "Affiliation: \(card.affiliation)"
-        lblType.text = "Type: \(card.type)"
-        if let healthText = card.health {
-            lblHealth.text = "Health: \(healthText)"
+    func configureCell(card:NSManagedObject){
+        
+        if let imageData = card.value(forKeyPath: "image") as? Data,
+            let image = UIImage(data: imageData) {
+            imgCardPicture.image = image
+        } else {
+            imgCardPicture.image = UIImage(named: "default_card")
         }
-        if let flavour_text = card.flavour_text {
+        
+        
+        if let name = card.value(forKeyPath: "name") as? String {
+            lblName.text = name
+        }
+        if let card_number = card.value(forKeyPath: "card_number") as? Int {
+            lblCardNumber.text = "Card Number: \(card_number)"
+        }
+        if let affiliation = card.value(forKeyPath: "affiliation") as? String {
+            lblAffiliation.text = "Affiliation: \(affiliation)"
+        }
+        if let type = card.value(forKeyPath: "type") as? String {
+            lblType.text = "Type: \(type)"
+        }
+        if let health = card.value(forKeyPath: "health") as? String {
+            lblHealth.text = "Health: \(health)"
+        }
+        if let flavour_text = card.value(forKeyPath: "flavour_text") as? String {
             lblFalvourText.text = "Flavour Text: \(flavour_text)"
         }
-        lblAwareness.text = "Awareness: \(card.awareness)"
-        lblArtist.text = "Artist: \(card.artist)"
-        lblSet.text = "Set: \(card.set)"
+        if let awareness = card.value(forKeyPath: "awareness") as? String {
+            lblHealth.text = "Awareness: \(awareness)"
+        }
+        if let artist = card.value(forKeyPath: "artist") as? String {
+            lblArtist.text = "Artist: \(artist)"
+        }
+        if let set = card.value(forKeyPath: "set") as? String {
+            lblSet.text = "Set: \(set)"
+        }
         
         self.selectionStyle = .none
     }

@@ -25,7 +25,7 @@ class APILayer {
                         let awareness = item.value["awareness"] as? String,
                         let rule_text = item.value["rule_text"] as? String,
                         let artist = item.value["artist"] as? String,
-                        let pictureString = item.value["picture"] as? String,
+                        let imageURL = item.value["picture"] as? String,
                         let set = item.value["set"] as? String,
                         let created_at = item.value["created_at"] as? String,
                         let updated_at = item.value["updated_at"] as? String,
@@ -35,32 +35,50 @@ class APILayer {
                             continue
                     }
                     
+                    let thisCard = Card.save(id: id, name: name, rarity: rarity, card_number: card_number, affiliation: affiliation, type: type, awareness: awareness, rule_text: rule_text, artist: artist, set: set, created_at: created_at, updated_at: updated_at, number: number, supertype: supertype)
                     
-                    let card = Card(id: id, rarity: rarity, card_number: card_number, name: name, affiliation: affiliation, type: type, awareness: awareness, rule_text: rule_text, artist: artist, set: set, created_at: created_at, updated_at: updated_at, number: number, supertype: supertype)
+                    if let url = URL(string: imageURL) {
+                        URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+                            
+                            if let data = data {
+                                thisCard.addImageData(data)
+                                AppSession.shared.cards.append(thisCard)
+                                update("\(AppSession.shared.cards.count) of \(json.count)")
+                                if AppSession.shared.cards.count == json.count {
+                                    success()
+                                }
+                            } else if error != nil {AppSession.shared.cards.append(thisCard)
+                                update("\(AppSession.shared.cards.count) of \(json.count)")
+                                if AppSession.shared.cards.count == json.count {
+                                    success()
+                                }
+                            }
+                        }).resume()
+                    }
                     
-                    card.loadImageUsingCacheWithURLString(pictureString, placeHolder: UIImage(named: "default_card")!,  complete: {
-                        update("\(AppSession.shared.cards.count) of \(json.count)")
-                        AppSession.shared.cards.append(card)
-                        if AppSession.shared.cards.count == json.count {
-                            success()
-                        }
-                    })
-                    
-                    if let health = item.value["health"] as? String {
-                        card.health = health
-                    }
-                    if let chi = item.value["chi"] as? Int {
-                        card.chi = chi
-                    }
-                    if let energy = item.value["energy"] as? Int {
-                        card.energy = energy
-                    }
-                    if let aura = item.value["aura"] as? Int {
-                        card.aura = aura
-                    }
-                    if let flavour_text = item.value["flavour_text"] as? String {
-                        card.flavour_text = flavour_text
-                    }
+//                    card.loadImageUsingCacheWithURLString(pictureString, placeHolder: UIImage(named: "default_card")!,  complete: {
+//                        update("\(AppSession.shared.cards.count) of \(json.count)")
+//                        AppSession.shared.cards.append(card)
+//                        if AppSession.shared.cards.count == json.count {
+//                            success()
+//                        }
+//                    })
+//
+//                    if let health = item.value["health"] as? String {
+//                        card.health = health
+//                    }
+//                    if let chi = item.value["chi"] as? Int {
+//                        card.chi = chi
+//                    }
+//                    if let energy = item.value["energy"] as? Int {
+//                        card.energy = energy
+//                    }
+//                    if let aura = item.value["aura"] as? Int {
+//                        card.aura = aura
+//                    }
+//                    if let flavour_text = item.value["flavour_text"] as? String {
+//                        card.flavour_text = flavour_text
+//                    }
                 }
             }
         }
