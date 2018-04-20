@@ -13,6 +13,7 @@ import CoreData
 class LoadingVC: UIViewController {
     
     @IBOutlet weak var lblStatus: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         
@@ -24,15 +25,23 @@ class LoadingVC: UIViewController {
         AppSession.shared.webView.load(myRequest)
         
         
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Card")
         
         do {
+            
+            //Load the cards from CoreData
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+            let managedContext = appDelegate.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Card")
             AppSession.shared.cards = try managedContext.fetch(fetchRequest)
-            if AppSession.shared.cards.isEmpty {
+            
+            
+            if !AppSession.shared.cards.isEmpty {
+                //Delayed load to show off the splash screen
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    self.segueAfterLoad()
+                }
+            } else {
+                //Load cards from web service
                 APILayer.shared.loadAllCards(
                     update: { status in
                         dispatchMain {
@@ -41,17 +50,24 @@ class LoadingVC: UIViewController {
                 }, success: {
                     self.segueAfterLoad()
                 })
-            } else {
+                
+                
+                //Begin Loading
+                activityIndicator.isHidden = false
+                lblStatus.text = "Downloading data from webservice"
+            }
+            
+            
+        } catch let error as NSError {
+            alertSystemError {
                 self.segueAfterLoad()
             }
-        } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
-            //Loads the cards
         }
     }
     
     
-    func segueAfterLoad(){
+    private func segueAfterLoad(){
         dispatchMain {
             self.performSegue(withIdentifier: "loaded", sender: self)
         }
