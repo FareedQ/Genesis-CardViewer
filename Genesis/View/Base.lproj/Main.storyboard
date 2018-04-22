@@ -299,10 +299,10 @@
             </objects>
             <point key="canvasLocation" x="567.20000000000005" y="800.14992503748135"/>
         </scene>
-        <!--View Controller-->
+        <!--Hero Selector-->
         <scene sceneID="7yZ-vY-o4D">
             <objects>
-                <viewController id="mQE-8U-p9h" sceneMemberID="viewController">
+                <viewController id="mQE-8U-p9h" customClass="HeroSelector" customModule="Genesis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y9K-VM-RdV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
