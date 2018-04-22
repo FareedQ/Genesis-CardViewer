@@ -24,11 +24,13 @@ class CardInfoCell: UITableViewCell {
     
     func configureCell(card:Card){
         
+        // Made all datapoints load independantly, because I don't know what I'm getting.
+        
         if let imageData = card.value(forKeyPath: "image") as? Data,
             let image = UIImage(data: imageData) {
             imgCardPicture.image = image
         } else {
-            imgCardPicture.image = defaultCardImage
+            imgCardPicture.image = DEFAULTCARDIMAGE
         }
         
         if let name = card.value(forKeyPath: "name") as? String {

@@ -17,15 +17,6 @@ class LoadingVC: UIViewController {
     
     override func viewDidLoad() {
         
-        //Loads the Webview to prevent later loading
-        let webConfiguration = WKWebViewConfiguration()
-        AppSession.shared.webView = WKWebView(frame: view.frame, configuration: webConfiguration)
-        let myURL = URL(string: "http://www.genesisbattleofchampions.com")
-        let myRequest = URLRequest(url: myURL!)
-        AppSession.shared.webView.load(myRequest)
-        
-        
-        
         do {
             
             //Load the cards from CoreData

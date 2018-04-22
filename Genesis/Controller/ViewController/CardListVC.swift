@@ -11,6 +11,7 @@ import Alamofire
 
 class CardListVC: UIViewController {
 
+    //Set a selectedCard variable to be able to be passed to the detail view
     fileprivate var selectedCard = 0
     
     @IBOutlet weak var tblInformation: UITableView!

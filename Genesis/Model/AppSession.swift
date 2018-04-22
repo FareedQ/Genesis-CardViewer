@@ -9,9 +9,10 @@
 import WebKit
 import CoreData
 
+// Variable data shared throughout the app
+
 class AppSession {
     static let shared = AppSession()
     
     var cards:[Card] = []
-    var webView: WKWebView!
 }
