@@ -326,6 +326,8 @@
                     <navigationItem key="navigationItem" id="IYB-gB-WZK"/>
                     <connections>
                         <outlet property="currentCardView" destination="9bL-Jy-Rg7" id="AdO-IS-yx0"/>
+                        <outlet property="currentCardX" destination="yra-6F-kDR" id="3Lz-aL-XGW"/>
+                        <outlet property="currentCardY" destination="fvi-z5-5eg" id="cQT-Ds-Yaa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sKd-i6-6ML" userLabel="First Responder" sceneMemberID="firstResponder"/>
