@@ -299,10 +299,10 @@
             </objects>
             <point key="canvasLocation" x="567.20000000000005" y="800.14992503748135"/>
         </scene>
-        <!--Hero Selector-->
+        <!--Champion Selector-->
         <scene sceneID="7yZ-vY-o4D">
             <objects>
-                <viewController id="mQE-8U-p9h" customClass="HeroSelector" customModule="Genesis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mQE-8U-p9h" customClass="ChampionSelector" customModule="Genesis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y9K-VM-RdV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -322,7 +322,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rwX-5A-3RR" firstAttribute="centerX" secondItem="m36-nz-daf" secondAttribute="centerX" id="ArL-ht-Z8L"/>
                             <constraint firstItem="9bL-Jy-Rg7" firstAttribute="centerY" secondItem="m36-nz-daf" secondAttribute="centerY" id="fvi-z5-5eg"/>
@@ -331,7 +331,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m36-nz-daf"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IYB-gB-WZK"/>
+                    <navigationItem key="navigationItem" title="Champion Selector" id="IYB-gB-WZK"/>
                     <connections>
                         <outlet property="currentCardView" destination="9bL-Jy-Rg7" id="AdO-IS-yx0"/>
                         <outlet property="currentCardX" destination="yra-6F-kDR" id="3Lz-aL-XGW"/>

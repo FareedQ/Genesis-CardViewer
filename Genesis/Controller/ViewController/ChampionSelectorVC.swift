@@ -1,5 +1,5 @@
 //
-//  HeroSelectorVC.swift
+//  ChampionSelectorVC.swift
 //  Genesis
 //
 //  Created by Fareed's Personal Account on 2018-04-21.
@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class HeroSelector: UIViewController {
+class ChampionSelector: UIViewController {
     
     let championPredicate = NSPredicate(format: "supertype = 'Champion'")
     var championcards = [Card]()
@@ -23,6 +23,9 @@ class HeroSelector: UIViewController {
     let sideOffset:CGFloat = 45
     
     override func viewDidLoad() {
+        
+        //Give alert message with tutorial
+        self.alertTutorialChampion { }
         
         //Load the Champion cards from CoreData
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
