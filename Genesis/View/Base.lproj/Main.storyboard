@@ -307,9 +307,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rwX-5A-3RR" customClass="CardView" customModule="Genesis" customModuleProvider="target">
+                                <rect key="frame" x="16" y="81" width="343" height="520"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="FQ5-XH-TEK"/>
+                                    <constraint firstAttribute="height" constant="520" id="VvM-d2-M89"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bL-Jy-Rg7" customClass="CardView" customModule="Genesis" customModuleProvider="target">
                                 <rect key="frame" x="16" y="81" width="343" height="520"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="520" id="EsG-m1-Ee9"/>
                                     <constraint firstAttribute="width" constant="343" id="IBV-fg-RPC"/>
@@ -318,7 +324,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="rwX-5A-3RR" firstAttribute="centerX" secondItem="m36-nz-daf" secondAttribute="centerX" id="ArL-ht-Z8L"/>
                             <constraint firstItem="9bL-Jy-Rg7" firstAttribute="centerY" secondItem="m36-nz-daf" secondAttribute="centerY" id="fvi-z5-5eg"/>
+                            <constraint firstItem="rwX-5A-3RR" firstAttribute="centerY" secondItem="m36-nz-daf" secondAttribute="centerY" id="te6-fU-OuT"/>
                             <constraint firstItem="9bL-Jy-Rg7" firstAttribute="centerX" secondItem="m36-nz-daf" secondAttribute="centerX" id="yra-6F-kDR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m36-nz-daf"/>
@@ -328,6 +336,7 @@
                         <outlet property="currentCardView" destination="9bL-Jy-Rg7" id="AdO-IS-yx0"/>
                         <outlet property="currentCardX" destination="yra-6F-kDR" id="3Lz-aL-XGW"/>
                         <outlet property="currentCardY" destination="fvi-z5-5eg" id="cQT-Ds-Yaa"/>
+                        <outlet property="nextCardView" destination="rwX-5A-3RR" id="lyA-3j-JxC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sKd-i6-6ML" userLabel="First Responder" sceneMemberID="firstResponder"/>

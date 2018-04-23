@@ -15,6 +15,7 @@ class HeroSelector: UIViewController {
     var championcards = [Card]()
     
     @IBOutlet weak var currentCardView: CardView!
+    @IBOutlet weak var nextCardView: CardView!
     @IBOutlet weak var currentCardY: NSLayoutConstraint!
     @IBOutlet weak var currentCardX: NSLayoutConstraint!
     var originalTouch = CGPoint.zero
@@ -29,8 +30,8 @@ class HeroSelector: UIViewController {
         championcards = try! managedContext.fetch(fetchRequest) as! [Card]
         
         //Set current card as the 0 card in the index
-        let loadedCard = loadCard(index: 0)
-        self.currentCardView?.addSubview(loadedCard)
+        self.currentCardView?.addSubview(loadCard(index: 0))
+        self.nextCardView?.addSubview(loadCard(index: 1))
         
         //Add guesture recongizer for tinder controls
         let guestureRecongizer = UIPanGestureRecognizer(target: self, action: #selector(selectedOption))
@@ -45,6 +46,7 @@ class HeroSelector: UIViewController {
         if let cardImageData = championcards[index].value(forKey: "image") as? Data {
             let cardImage = UIImage(data: cardImageData)
             card.imgCard.image = cardImage
+            card.imgCard.resizeImage(newWidth: currentCardView.bounds.width)
         }
         
         return card
