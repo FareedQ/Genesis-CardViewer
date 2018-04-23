@@ -20,10 +20,4 @@ class CardView: UIView {
         super.init(coder: aDecoder)
     }
     
-    func fadeIn() {
-        UIView.animate(withDuration: 0.1, animations: {
-            self.imgCard.alpha = 1
-        })
-    }
-    
 }
