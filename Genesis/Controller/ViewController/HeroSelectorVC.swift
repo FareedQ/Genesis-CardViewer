@@ -19,6 +19,8 @@ class HeroSelector: UIViewController {
     @IBOutlet weak var currentCardY: NSLayoutConstraint!
     @IBOutlet weak var currentCardX: NSLayoutConstraint!
     var originalTouch = CGPoint.zero
+    var selectionIndex = 0
+    let sideOffset:CGFloat = 45
     
     override func viewDidLoad() {
         
@@ -29,16 +31,25 @@ class HeroSelector: UIViewController {
         fetchRequest.predicate = championPredicate
         championcards = try! managedContext.fetch(fetchRequest) as! [Card]
         
-        //Set current card as the 0 card in the index
-        self.currentCardView?.addSubview(loadCard(index: 0))
-        self.nextCardView?.addSubview(loadCard(index: 1))
+        loadBothCardViews()
         
         //Add guesture recongizer for tinder controls
         let guestureRecongizer = UIPanGestureRecognizer(target: self, action: #selector(selectedOption))
         currentCardView?.addGestureRecognizer(guestureRecongizer)
     }
     
-    private func loadCard(index: Int) -> CardView {
+    private func loadBothCardViews(){
+        self.currentCardView?.addSubview(loadACardView(index: selectionIndex))
+        
+        if self.selectionIndex != self.championcards.count - 1 {
+            self.nextCardView?.addSubview(loadACardView(index: selectionIndex + 1))
+        } else {
+            // This is to allow cycling of the cards
+            self.nextCardView?.addSubview(loadACardView(index: 0))
+        }
+    }
+    
+    private func loadACardView(index: Int) -> CardView {
         let loaded = Bundle.main.loadNibNamed("Card", owner: self, options: nil)
         let card = loaded?[0] as! CardView
         card.frame = currentCardView.bounds
@@ -56,6 +67,9 @@ class HeroSelector: UIViewController {
     //MARK: Guesture Recongizer Code
     @objc func selectedOption(sender: UIPanGestureRecognizer){
         let myTouchInEntireView = sender.location(in: view)
+        let xOffset = getXOffset(myTouchInEntireView)
+        let yOffset = getYOffset(myTouchInEntireView)
+        let angle = getOffsetAngle(myTouchInEntireView)
         
         switch sender.state {
         case .began:
@@ -63,16 +77,20 @@ class HeroSelector: UIViewController {
             break
             
         case .changed:
-            let xOffset = getXOffset(myTouchInEntireView)
-            let yOffset = getYOffset(myTouchInEntireView)
-            let angle = getOffsetAngle(myTouchInEntireView)
             
             movingCard(xOffset: xOffset, yOffset: yOffset, angle: angle)
             
             break
             
         case .ended:
-            putCardBack()
+            
+            if (xOffset/sideOffset < 0.3) {
+                self.animateOffScreen(x: -1000, y: 0)
+            } else if (-xOffset/sideOffset < 0.3) {
+                self.animateOffScreen(x: 1000, y: 0)
+            } else {
+                putCardBack()
+            }
             break
         default:
             break
@@ -106,11 +124,33 @@ class HeroSelector: UIViewController {
     
     private func putCardBack() {
         UIView.animate(withDuration: 0.3, animations: {
-            self.currentCardX.constant = 0
-            self.currentCardY.constant = 0
-            self.currentCardView?.transform = CGAffineTransform(rotationAngle: 0)
-            self.view.layoutIfNeeded()
+            self.setCardToNormal()
         })
+    }
+    
+    private func setCardToNormal(){
+        self.currentCardX.constant = 0
+        self.currentCardY.constant = 0
+        self.currentCardView?.transform = CGAffineTransform(rotationAngle: 0)
+        self.view.layoutIfNeeded()
+    }
+    
+    private func animateOffScreen(x:CGFloat, y:CGFloat){
+        UIView.animate(withDuration: 0.3, animations: {
+            let angle = self.getOffsetAngle(CGPoint(x: x, y: y))
+            self.movingCard(xOffset: x, yOffset: y, angle: angle)
+            self.view.layoutIfNeeded()
+            self.currentCardView.isHidden = true
+        }, completion: { bool in
+            self.currentCardView.isHidden = false
+            self.selectionIndex += 1
+            if self.selectionIndex == self.championcards.count {
+                self.selectionIndex = 0
+            }
+            self.loadBothCardViews()
+            self.setCardToNormal()
+        })
+        self.currentCardView.isHidden = false
     }
     
 }
