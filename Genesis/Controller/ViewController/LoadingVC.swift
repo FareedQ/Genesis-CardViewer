@@ -16,9 +16,7 @@ class LoadingVC: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
-        
         do {
-            
             //Load the cards from CoreData
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
             let managedContext = appDelegate.persistentContainer.viewContext
@@ -54,6 +52,14 @@ class LoadingVC: UIViewController {
                 self.segueAfterLoad()
             }
             print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if !UserDefaults.standard.hasSeenDisclaimer() {
+            alertDisclaimer(action: {})
         }
     }
     

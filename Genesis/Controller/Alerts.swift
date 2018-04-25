@@ -42,9 +42,16 @@ extension UIViewController {
     }
     
     func alertTutorialChampion(action:@escaping()->()){
-        alertMessage(title: "Tutorial", message: "This page is to swipe through and select a champion. Swipe left or right to go the next champion card. Will add double tap to select the champion.") {
+        alertMessage(title: "Tutorial", message: "This page is to swipe through and select a champion. Swipe left or right to go the next champion card.") {
             action()
         }
     }
+    
+    func alertDisclaimer(action:@escaping()->()){
+        alertMessage(title: "Disclaimer", message: "This app is not affiliated with Genesis or Haunted Castle gaming.") {
+            action()
+        }
+    }
+
 
 }
