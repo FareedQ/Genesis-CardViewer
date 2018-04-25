@@ -42,7 +42,6 @@ class CardListVC: UIViewController {
 
 extension CardListVC : UITableViewDelegate, UITableViewDataSource {
     
-    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return AppSession.shared.cards.count
     }
@@ -60,6 +59,26 @@ extension CardListVC : UITableViewDelegate, UITableViewDataSource {
         selectedCard = indexPath.row
         self.performSegue(withIdentifier: "image", sender: self)
     }
-    
 }
 
+extension CardListVC : UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "filterOption", for: indexPath) as? UICollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        if indexPath.row % 3 == 0 {
+            cell.backgroundColor = UIColor.green
+        } else if indexPath.row % 3 == 1 {
+            cell.backgroundColor = UIColor.blue
+        } else {
+            cell.backgroundColor = UIColor.red
+        }
+        return cell
+    }
+    
+    
+}
