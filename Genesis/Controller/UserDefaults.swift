@@ -19,4 +19,14 @@ extension UserDefaults {
             return false
         }
     }
+    
+    func hasSeenTutorial() -> Bool {
+        let seen = UserDefaults.standard.bool(forKey: "tutorial")
+        if seen {
+            return true
+        } else {
+            UserDefaults.standard.set(true, forKey: "tutorial")
+            return false
+        }
+    }
 }

@@ -22,9 +22,6 @@ class ChampionSelector: UIViewController {
     
     override func viewDidLoad() {
         
-        //Give alert message with tutorial
-        self.alertTutorialChampion { }
-        
         //Load the Champion cards from CoreData
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -38,6 +35,15 @@ class ChampionSelector: UIViewController {
         //Add guesture recongizer for tinder controls
         let guestureRecongizer = UIPanGestureRecognizer(target: self, action: #selector(selectedOption))
         currentCardView?.addGestureRecognizer(guestureRecongizer)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //Give alert message with tutorial
+        if !UserDefaults.standard.hasSeenTutorial() {
+            alertTutorialChampion(action: {})
+        }
     }
     
     @IBAction func btnNext(_ sender: Any) {
