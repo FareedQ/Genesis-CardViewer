@@ -321,11 +321,44 @@
                                     <constraint firstAttribute="width" constant="343" id="IBV-fg-RPC"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dss-FA-Grz">
+                                <rect key="frame" x="155" y="580" width="65" height="30"/>
+                                <state key="normal" title="More Info">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JGc-vC-rs6" kind="show" id="OEg-4L-JbK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCV-1n-yFU">
+                                <rect key="frame" x="8" y="580" width="32" height="30"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnNext:" destination="mQE-8U-p9h" eventType="touchUpInside" id="0Q9-xu-kQb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vu-zM-hgm">
+                                <rect key="frame" x="314" y="580" width="53" height="30"/>
+                                <state key="normal" title="Choose">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Jag-0G-Fhq" kind="show" id="jti-lf-hPq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rwX-5A-3RR" firstAttribute="centerX" secondItem="m36-nz-daf" secondAttribute="centerX" id="ArL-ht-Z8L"/>
+                            <constraint firstItem="m36-nz-daf" firstAttribute="bottom" secondItem="3vu-zM-hgm" secondAttribute="bottom" constant="8" id="XfE-Mr-7LL"/>
+                            <constraint firstItem="dss-FA-Grz" firstAttribute="centerX" secondItem="m36-nz-daf" secondAttribute="centerX" id="Y8H-Yv-Cbc"/>
+                            <constraint firstItem="m36-nz-daf" firstAttribute="bottom" secondItem="dss-FA-Grz" secondAttribute="bottom" constant="8" id="bIj-RG-kia"/>
+                            <constraint firstItem="m36-nz-daf" firstAttribute="bottom" secondItem="zCV-1n-yFU" secondAttribute="bottom" constant="8" id="e6f-G5-o8b"/>
                             <constraint firstItem="9bL-Jy-Rg7" firstAttribute="centerY" secondItem="m36-nz-daf" secondAttribute="centerY" id="fvi-z5-5eg"/>
+                            <constraint firstItem="zCV-1n-yFU" firstAttribute="leading" secondItem="m36-nz-daf" secondAttribute="leading" constant="8" id="gP5-h5-hky"/>
+                            <constraint firstItem="m36-nz-daf" firstAttribute="trailing" secondItem="3vu-zM-hgm" secondAttribute="trailing" constant="8" id="jPv-Vr-EUX"/>
                             <constraint firstItem="rwX-5A-3RR" firstAttribute="centerY" secondItem="m36-nz-daf" secondAttribute="centerY" id="te6-fU-OuT"/>
                             <constraint firstItem="9bL-Jy-Rg7" firstAttribute="centerX" secondItem="m36-nz-daf" secondAttribute="centerX" id="yra-6F-kDR"/>
                         </constraints>
@@ -342,6 +375,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sKd-i6-6ML" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1504.8" y="1700.5997001499252"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3eC-gy-bX4">
+            <objects>
+                <viewController id="Jag-0G-Fhq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nfq-nA-EOZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wB-yr-fys">
+                                <rect key="frame" x="8" y="300.5" width="359" height="81.5"/>
+                                <string key="text">This screen would be the deck builder and card searching mechanic. Need to have stats avaliable at all time and ability to add card to deck should be fluid.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8wB-yr-fys" firstAttribute="leading" secondItem="h3q-tI-JhA" secondAttribute="leading" constant="8" id="deX-am-kig"/>
+                            <constraint firstItem="8wB-yr-fys" firstAttribute="centerY" secondItem="h3q-tI-JhA" secondAttribute="centerY" id="fwG-R8-Mqb"/>
+                            <constraint firstItem="h3q-tI-JhA" firstAttribute="trailing" secondItem="8wB-yr-fys" secondAttribute="trailing" constant="8" id="ohE-l4-lx5"/>
+                            <constraint firstItem="8wB-yr-fys" firstAttribute="centerX" secondItem="h3q-tI-JhA" secondAttribute="centerX" id="r4z-ZI-vqb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h3q-tI-JhA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IG8-Mp-Eda" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1506" y="2435"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="w6o-fi-uqT">
+            <objects>
+                <viewController id="JGc-vC-rs6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SRR-9B-9jQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn about the lore and play style for this particular character" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cat-Jw-1y6">
+                                <rect key="frame" x="8" y="321" width="359" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4CW-nC-DSu" firstAttribute="leading" secondItem="Cat-Jw-1y6" secondAttribute="leading" constant="-8" id="3J8-F6-JmK"/>
+                            <constraint firstItem="Cat-Jw-1y6" firstAttribute="centerX" secondItem="4CW-nC-DSu" secondAttribute="centerX" id="9Yk-vf-xQ9"/>
+                            <constraint firstItem="Cat-Jw-1y6" firstAttribute="trailing" secondItem="4CW-nC-DSu" secondAttribute="trailing" constant="-8" id="HSl-kf-STe"/>
+                            <constraint firstItem="Cat-Jw-1y6" firstAttribute="centerY" secondItem="4CW-nC-DSu" secondAttribute="centerY" id="biD-xG-hI3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4CW-nC-DSu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K0O-n4-PNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2362" y="1701"/>
         </scene>
         <!--Champion-->
         <scene sceneID="dHm-0F-GFR">

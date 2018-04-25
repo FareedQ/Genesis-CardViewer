@@ -41,6 +41,10 @@ class ChampionSelector: UIViewController {
         currentCardView?.addGestureRecognizer(guestureRecongizer)
     }
     
+    @IBAction func btnNext(_ sender: Any) {
+        self.animateOffScreen(x: -1000, y: 0)
+    }
+    
     private func loadBothCardViews(){
         self.currentCardView?.addSubview(loadACardView(index: selectionIndex))
         
