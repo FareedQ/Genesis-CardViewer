@@ -7,6 +7,7 @@ target 'Genesis' do
 
   # Pods for Genesis
   pod 'Alamofire', '~> 4.5'
+  pod 'Fuse'
 
   target 'GenesisTests' do
     inherit! :search_paths

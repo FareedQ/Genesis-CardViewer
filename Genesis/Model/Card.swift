@@ -8,10 +8,18 @@
 
 import UIKit
 import CoreData
+import Fuse
 
 // An extension on the Card coredata object
 
-extension Card {
+extension Card: Fuseable {
+    
+    public var properties: [FuseProperty] {
+        return [
+            FuseProperty(name: "name", weight: 1),
+        ]
+    }
+    
     
     static func save(id: Int, name: String, rarity: String, card_number: Int, affiliation: String, type: String, awareness: String, rule_text: String, artist: String, set: String, created_at: String, updated_at: String, number: Int, supertype: String, imageURL: String) -> Card {
         

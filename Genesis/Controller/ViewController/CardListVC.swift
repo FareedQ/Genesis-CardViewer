@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Alamofire
+import Fuse
 
 class CardListVC: UIViewController {
 
@@ -79,6 +79,20 @@ extension CardListVC : UICollectionViewDelegate, UICollectionViewDataSource {
         }
         return cell
     }
+}
+
+extension CardListVC : UISearchBarDelegate {
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let fuse = Fuse()
+        guard let searchBarText = searchBar.text else { return }
+        let results = fuse.search(searchBarText, in: AppSession.shared.cards)
+        
+        results.forEach { item in
+            if item.score < 0.4 {
+                print(AppSession.shared.cards[item.index].name)
+            }
+        }
+    }
     
 }
