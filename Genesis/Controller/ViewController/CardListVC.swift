@@ -26,6 +26,7 @@ class CardListVC: UIViewController {
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
             let managedContext = appDelegate.persistentContainer.viewContext
             let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Card")
+            fetchRequest.predicate = NSPredicate(format: "supertype != 'Champion'")
             fetchRequest.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
             cards = try managedContext.fetch(fetchRequest) as! [Card]
         } catch {

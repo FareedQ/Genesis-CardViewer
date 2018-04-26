@@ -185,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1372" y="88.605697151424295"/>
+            <point key="canvasLocation" x="2588" y="2435"/>
         </scene>
         <!--Card Details-->
         <scene sceneID="vsS-tb-zsb">
@@ -214,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJM-C5-q3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2220" y="88.605697151424295"/>
+            <point key="canvasLocation" x="3436" y="2435"/>
         </scene>
         <!--LoadingVC-->
         <scene sceneID="aLA-bt-eyy">
@@ -267,25 +267,6 @@
             </objects>
             <point key="canvasLocation" x="-1238" y="89"/>
         </scene>
-        <!--Card List-->
-        <scene sceneID="hYT-5y-JWw">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qrR-E1-4fs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Card List" image="icon-Deck" selectedImage="icon-Deck" id="BCY-Ka-RQu"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hJQ-0V-ucm">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="B3p-RC-qea"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eIZ-jh-Rrq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="572" y="88.605697151424295"/>
-        </scene>
         <!--About Game-->
         <scene sceneID="34Q-01-0Ji">
             <objects>
@@ -312,7 +293,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="qrR-E1-4fs" kind="relationship" relationship="viewControllers" id="OYc-QG-3nM"/>
                         <segue destination="XZ0-5J-6t6" kind="relationship" relationship="viewControllers" id="nQE-2w-hcW"/>
                         <segue destination="hfC-YN-o7H" kind="relationship" relationship="viewControllers" id="0qo-wL-h7O"/>
                     </connections>
@@ -321,11 +301,11 @@
             </objects>
             <point key="canvasLocation" x="-367.19999999999999" y="88.605697151424295"/>
         </scene>
-        <!--About-->
+        <!--Website-->
         <scene sceneID="kBP-ke-NLx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hfC-YN-o7H" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About" image="icon-About" selectedImage="icon-About" id="3hk-MU-Y8o"/>
+                    <tabBarItem key="tabBarItem" title="Website" image="icon-About" selectedImage="icon-About" id="3hk-MU-Y8o"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5ME-D4-jdx">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -432,13 +412,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGZ-N1-UQb">
+                                <rect key="frame" x="114.5" y="540" width="145" height="30"/>
+                                <state key="normal" title="Continue to Card List"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="WND-nW-gbg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="h3q-tI-JhA" firstAttribute="bottom" secondItem="EGZ-N1-UQb" secondAttribute="bottom" constant="48" id="MSw-ec-M1p"/>
                             <constraint firstItem="8wB-yr-fys" firstAttribute="leading" secondItem="h3q-tI-JhA" secondAttribute="leading" constant="8" id="deX-am-kig"/>
                             <constraint firstItem="8wB-yr-fys" firstAttribute="centerY" secondItem="h3q-tI-JhA" secondAttribute="centerY" id="fwG-R8-Mqb"/>
                             <constraint firstItem="h3q-tI-JhA" firstAttribute="trailing" secondItem="8wB-yr-fys" secondAttribute="trailing" constant="8" id="ohE-l4-lx5"/>
                             <constraint firstItem="8wB-yr-fys" firstAttribute="centerX" secondItem="h3q-tI-JhA" secondAttribute="centerX" id="r4z-ZI-vqb"/>
+                            <constraint firstItem="EGZ-N1-UQb" firstAttribute="centerX" secondItem="h3q-tI-JhA" secondAttribute="centerX" id="ywA-2X-jLc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h3q-tI-JhA"/>
                     </view>
@@ -499,7 +488,6 @@
     <resources>
         <image name="icon-About" width="32" height="32"/>
         <image name="icon-Champion" width="32" height="32"/>
-        <image name="icon-Deck" width="32" height="32"/>
         <image name="logo" width="350" height="150"/>
     </resources>
 </document>
