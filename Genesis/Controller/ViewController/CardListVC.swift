@@ -101,6 +101,9 @@ extension CardListVC : UICollectionViewDelegate, UICollectionViewDataSource {
 extension CardListVC : UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.showsCancelButton = false
+        
         let fuse = Fuse()
         guard let searchBarText = searchBar.text else { return }
         let results = fuse.search(searchBarText, in: cards)
@@ -110,6 +113,15 @@ extension CardListVC : UISearchBarDelegate {
                 print(cards[item.index].name)
             }
         }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.showsCancelButton = false
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
     }
     
 }
