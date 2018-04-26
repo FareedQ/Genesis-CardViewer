@@ -21,11 +21,10 @@ class LoadingVC: UIViewController {
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
             let managedContext = appDelegate.persistentContainer.viewContext
             let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Card")
-            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
-            AppSession.shared.cards = try managedContext.fetch(fetchRequest) as! [Card]
+            let cards = try managedContext.fetch(fetchRequest) as! [Card]
             
             
-            if !AppSession.shared.cards.isEmpty {
+            if !cards.isEmpty {
                 //Delayed load to show off the splash screen
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     self.segueAfterLoad()

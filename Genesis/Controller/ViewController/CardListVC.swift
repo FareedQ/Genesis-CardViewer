@@ -8,15 +8,31 @@
 
 import UIKit
 import Fuse
+import CoreData
 
 class CardListVC: UIViewController {
 
     //Set a selectedCard variable to be able to be passed to the detail view
     fileprivate var selectedCard = 0
+    fileprivate var cards = [Card]()
     
     @IBOutlet weak var tblInformation: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        do {
+            //Load the cards from CoreData
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+            let managedContext = appDelegate.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Card")
+            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
+            cards = try managedContext.fetch(fetchRequest) as! [Card]
+        } catch {
+            alertSystemError {
+            }
+            print("Could not fetch. \(error)")
+        }
         
     }
     
@@ -32,7 +48,7 @@ class CardListVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "image" {
             if let destinationView = segue.destination as? ImageDetailVC {
-                destinationView.selectedCard = selectedCard
+                destinationView.givenCard = cards[selectedCard]
             }
         }
     }
@@ -43,14 +59,14 @@ class CardListVC: UIViewController {
 extension CardListVC : UITableViewDelegate, UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return AppSession.shared.cards.count
+        return cards.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "card", for: indexPath) as? CardInfoCell else {
             return UITableViewCell()
         }
-        cell.configureCell(card: AppSession.shared.cards[indexPath.row])
+        cell.configureCell(card: cards[indexPath.row])
         return cell
     }
     
@@ -86,11 +102,11 @@ extension CardListVC : UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let fuse = Fuse()
         guard let searchBarText = searchBar.text else { return }
-        let results = fuse.search(searchBarText, in: AppSession.shared.cards)
+        let results = fuse.search(searchBarText, in: cards)
         
         results.forEach { item in
             if item.score < 0.4 {
-                print(AppSession.shared.cards[item.index].name)
+                print(cards[item.index].name)
             }
         }
     }

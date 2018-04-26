@@ -59,17 +59,14 @@ class APILayer {
                         thisCard.insert(flavour_text: flavour_text)
                     }
                     
-                    //Appends to the AppSession List of cards
-                    AppSession.shared.cards.append(thisCard)
-                    
                     
                     
                     //This snippet is to promise after all images are loaded then it will stat this load is a success
                     self.returnImageData(for: imageURL, complete: { imageData in
                         thisCard.insert(imageData: imageData)
                         countedCardsWithImagesLoaded += 1
-                        update("\(countedCardsWithImagesLoaded) of \(AppSession.shared.cards.count)")
-                        if countedCardsWithImagesLoaded == AppSession.shared.cards.count {
+                        update("\(countedCardsWithImagesLoaded) of \(json.count)")
+                        if countedCardsWithImagesLoaded == json.count {
                             success()
                         }
                     })

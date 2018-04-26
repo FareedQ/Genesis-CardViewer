@@ -14,5 +14,5 @@ import CoreData
 class AppSession {
     static let shared = AppSession()
     
-    var cards:[Card] = []
+//    var cards:[Card] = []
 }

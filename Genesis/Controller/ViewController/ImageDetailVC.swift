@@ -12,10 +12,12 @@ class ImageDetailVC: UIViewController {
     
     @IBOutlet weak var imgCard: UIImageView!
     
-    var selectedCard = 0
+    var givenCard:Card?
     
     override func viewDidLoad() {
-        guard let imageData = AppSession.shared.cards[selectedCard].value(forKeyPath: "image") as? Data,
+        
+        guard let actualCard = givenCard,
+            let imageData = actualCard.value(forKeyPath: "image") as? Data,
             let image = UIImage(data: imageData) else {
                 imgCard.image = UIImage(named: "default_card")
                 return
